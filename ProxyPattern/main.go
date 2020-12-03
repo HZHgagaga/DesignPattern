@@ -4,6 +4,7 @@ import "fmt"
 
 type Connection interface {
 	Connect()
+	Send()
 	Close()
 }
 
