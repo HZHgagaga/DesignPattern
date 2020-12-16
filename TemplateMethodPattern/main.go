@@ -28,6 +28,7 @@ type EatCommand struct {
 	Command
 }
 
+//复用Command类，并且改造Excute方法
 func (e *EatCommand) Excute() {
 	fmt.Println("Eat Eat Eat")
 }

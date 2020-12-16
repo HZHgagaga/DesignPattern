@@ -8,6 +8,7 @@ type User struct {
 	show  *Show
 }
 
+//提供了一个统一的接口, 用来访问子系统中的一群接口
 func (u *User) Save() {
 	u.equip.Save()
 	u.pig.Save()

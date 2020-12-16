@@ -22,10 +22,12 @@ func NewMsgHandle() *MsgHandle {
 	}
 }
 
+//注册不同的行为
 func (m *MsgHandle) Register(id int, router Router) {
 	m.msgMap[id] = router
 }
 
+//根据行为id进行不同的处理
 func (m *MsgHandle) DoMsgHandle(id int) {
 	if router, ok := m.msgMap[id]; ok {
 		router.Handle()

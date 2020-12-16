@@ -26,6 +26,7 @@ func (s *Session) Send(str string) {
 	fmt.Println(s.addr, "Send:", str)
 }
 
+//使用组合解耦，且实现组合对象的接口，能替代组合的对象，代理其行为
 type ProxySession struct {
 	session *Session
 }

@@ -13,7 +13,7 @@ func (d *Dio) Description() {
 }
 
 type Mask struct {
-	people    People
+	people    People //使用组合装饰
 	attribute string
 }
 

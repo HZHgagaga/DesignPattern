@@ -16,11 +16,13 @@ func NewManager() *Manager {
 	}
 }
 
+//用户注册，观察manager发布的消息
 func (m *Manager) Watch(name string, ob Observer) {
 	m.user = append(m.user, ob)
 	fmt.Println(name, "watch manager")
 }
 
+//manager变化通知所有观察者
 func (m *Manager) Change(str string) {
 	fmt.Println("manager change:", str)
 	m.notify(str)
